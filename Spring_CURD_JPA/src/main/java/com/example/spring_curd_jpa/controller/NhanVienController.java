@@ -38,7 +38,6 @@ public class NhanVienController {
     }
 
     @PutMapping("/save")
-
     // request ở dạng thêm hoặc update
     public NhanVien saveOrUpdate(@RequestBody  NhanVien nhanVien){
         return service.saveOrUpdate(nhanVien);
