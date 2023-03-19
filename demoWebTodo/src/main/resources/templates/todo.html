@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Danh Sách Việc Cần Làm Là</h1>
+<ul>
+<!--
+    th:each == forEach
+    th:each = "ten_bien : ${ten_list}"
+-->
+    <li th:each="todo : ${todoList}">
+        <!-- với mỗi phần tử lấy ra các thộc tính của _toDo-->
+        <span th:text="*{todo.getTitle()}"></span> : <span th:text="*{todo.getDetail()}"></span>
+    </li>
+    <form action="/listTodo" method="get">
+        So CV Muon HienThi: <input type="number" name="limit">
+       <button>Gửi</button>
+    </form>
+    <a th:href="@{/addTodo}"><button>Thêm Công Việc</button></a>
+</ul>
+</body>
+</html>
