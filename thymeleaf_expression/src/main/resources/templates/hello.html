@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--
+th:text đổ text thuần không thẻ HTML vào view template
+
+th:utext đổ text có thẻ HTML, CSS vào view template
+-->
+
+
+
+<!--để lấy được giá trị của bien mess đặt bên controller ta sẽ sử dụng biến ${...}-->
+<!--tóm gọn lại nó sẽ lấy giá trị của biến cục bo lấy từ bên controller-->
+<p th:text="${mess}"></p>
+
+<!-- *{..} nó sẽ lấy giá trị của một biến cho trước bởi th:Object-->
+<!--tóm lại nó sẽ lấy giá trị nằm trong một biến đã được chỉ định (th:Object) -->
+<div th:object="${giangVien}">
+    Id: <span th:text="*{id}"></span> <br>
+    Ten: <span th:text="*{name}"></span> <br>
+    Dia Chi: <span th:text="*{diaChi}"></span> <br>
+</div>
+<!-- nếu ta sử dụng ${..} thay thế cho *{..} thì code sẽ như thế này
+
+<div >
+    Id: <span th:text="${giangVien.id}"></span> <br>
+    Ten: <span th:text="${giangVien.name}"></span> <br>
+    Dia Chi: <span th:text="${giangVien.diaChi}"></span> <br>
+</div>
+
+-->
+
+
+<!-- #{...}: dunng để lấy các messenger đặt từ các properties
+ vd: ben trong application.properties có một biến home.welcome = " hello english "
+
+ -->
+<div >
+    <p th:utext="#{home.welcome}">xin chào đây là tieesn việt</p>
+</div>
+</body>
+</html>
