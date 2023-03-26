@@ -1,0 +1,10 @@
+sonpt: #prefix
+  email: phamson191203@gmail.com
+  googleAnalyticsId: U-xxxxx
+
+  # list authors
+
+authors:
+  - sonpt
+  - antom
+
