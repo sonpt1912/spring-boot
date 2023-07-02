@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body ng-controller="myController">
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>ma</th>
+          <th>ten</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ngRepeat: item in listProduct -->
+        <tr ng-repeat="item in listProduct">
+          <td>{{item.id}}</td>
+          <td>{{item.ma}}</td>
+          <td>{{item.ten}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <input
+      type="text"
+      ng-model="ma"
+      class="ng-pristine ng-untouched ng-valid ng-empty"
+    />
+    <input
+      type="text"
+      ng-model="ten"
+      class="ng-pristine ng-untouched ng-valid ng-empty"
+    />
+    <button ng-click="addProduct()">Add</button>
+
+    <script src="/lib/angular-1.8.2/angular.min.js"></script>
+    <script src="/node_modules/angular-websocket/dist/angular-websocket.min.js"></script>
+    <script src="/node_modules/sockjs-client/dist/sockjs.min.js"></script>
+    <script src="/node_modules/stompjs/lib/stomp.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
