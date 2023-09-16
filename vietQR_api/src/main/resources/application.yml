@@ -1,0 +1,8 @@
+
+#viet QR
+
+vietqr:
+  client-key: "c6b0e8de-2fd9-403d-9d04-24b25b00cb62"
+  api-key: "9fb6371e-31d5-4003-a9ec-b62644e9f235"
+  url:
+    create-qr: "https://api.vietqr.io/v2/generate"
