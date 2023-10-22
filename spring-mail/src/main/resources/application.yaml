@@ -1,0 +1,12 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: sonptph25875@fpt.edu.vn
+    password: tunr bdaz irje moox
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
