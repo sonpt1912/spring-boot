@@ -5,13 +5,13 @@ spring:
     username: guest
     password: guest
 
-rabbitmq:
+rpc:
   queue:
-    name: queue_demo
-  exchange:
-    name: exchange_demo
-  routing:
-    key: routing_key_demo
+    name: rpc.queue
+  reply:
+    queue:
+      name: rpc.rpc.reply.queue
+
 
 server:
   port: 8081

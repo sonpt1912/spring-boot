@@ -1,6 +1,6 @@
 <h1>Spring RabbitMQ</h1>
 
-<img src="producer/src/main/resources/Screenshot%202023-10-23%20003952.png">
+<img src="Screenshot%202023-10-23%20003952.png">
 
 I, install rabitmq with docker
 
